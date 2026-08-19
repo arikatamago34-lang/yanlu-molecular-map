@@ -2,6 +2,15 @@
 
 由 UN1 发起并开源、联合 OpenAI Codex 辅助构建的生命科学 3D 分子网络。
 
+## ⬇️ 普通用户免安装版
+
+不需要安装 Node.js，不需要登录，也不需要联网。下载后完整解压，双击 `index.html` 即可使用。
+
+- **[国内用户：点击从 Gitee 直接下载 v1.0.1](https://gitee.com/dai-su/yanlu-molecular-map/raw/main/downloads/yanlu-molecular-map-offline-v1.0.1.zip)**
+- **[备用线路：点击从 GitHub 直接下载 v1.0.1](https://github.com/arikatamago34-lang/yanlu-molecular-map/releases/download/v1.0.1/yanlu-molecular-map-offline-v1.0.1.zip)**
+
+> 如果点击后浏览器开始下载，等待完成后对 ZIP 选择“全部解压缩”，再打开解压目录中的 `index.html`。请勿直接在压缩包预览窗口中运行。
+
 本目录是原 Vinext / Cloudflare Worker 版本的**纯 Vite + React 静态迁移版**：已移除服务器组件、Worker、Drizzle 数据库与 ChatGPT 登录依赖，保留全部 3D 图谱、分子聚焦、过程平面、抽屉详情、全屏、字号、语言切换、分享与源码下载功能。构建产物为纯静态文件，不含任何境外 CDN、网络字体或 API，可在离线或中国大陆网络下稳定打开。
 
 ## 环境
@@ -15,7 +24,7 @@ npm install
 npm run build
 ```
 
-构建产物输出到 `dist/`。直接双击 `dist/index.html` 即可本地打开，或把整个 `dist/` 目录上传到任意静态托管平台。
+构建产物输出到 `dist/`，可把整个 `dist/` 目录上传到任意静态托管平台。本地免安装使用请下载上方经过单文件封装与浏览器验证的版本。
 
 > 说明：`npm run build`（走 `vite.config.cjs`）与 `node build.mjs`（直接用 Vite 的 JS API）等效，二者都会产出 `dist/`。原构建链依赖 OpenAI 私有的 Vinext/Worker 环境，本版本已改为纯 Vite + React 静态构建。
 
@@ -27,6 +36,7 @@ npm run build
 - `src/*.ts` 生化 / 细胞 / 分子图谱数据
 - `src/globals.css` 全部样式（纯 CSS，无外部引用）
 - `public/` 静态资产（og.png、favicon.svg、LICENSE.md、开源许可、源码包）
+- `downloads/` 面向普通用户的免安装版压缩包（便于 GitHub 与 Gitee 同步）
 
 ## 许可与署名
 
